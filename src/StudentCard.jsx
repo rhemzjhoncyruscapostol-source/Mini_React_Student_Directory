@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function StudentCard({ name, id, course, year }) {
+export default function StudentCard({ name, id, course, year, onDelete }) {
   const [favorites, setFavorites] = useState(0);
 
   return (
@@ -14,12 +14,15 @@ export default function StudentCard({ name, id, course, year }) {
         </div>
       </div>
 
-      <button
-        className={`favorite-btn ${favorites > 0 ? "active" : ""}`}
-        onClick={() => setFavorites(favorites + 1)}
-      >
-        ♥ Favorite: {favorites}
-      </button>
+      <div className="card-actions">
+        <button
+          className={`favorite-btn ${favorites > 0 ? "active" : ""}`}
+          onClick={() => setFavorites(favorites + 1)}
+        >
+          ♥ Favorite: {favorites}
+        </button>
+        <button className="delete-btn" onClick={() => onDelete(id)}>Delete</button>
+      </div>
     </div>
   );
 }
