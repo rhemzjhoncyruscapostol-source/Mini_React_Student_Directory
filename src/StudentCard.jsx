@@ -1,21 +1,13 @@
-export default function StudentCard({
-  name,
-  id,
-  course,
-  year,
-  favorite,
-  onDelete,
-  onToggleFavorite,
-}) {
+export default function StudentCard({ name, id, course, year, onDelete }) {
   const initials = name
-    .split(/[,\s]+/)
+    .split(/[\s,]+/)
     .filter(Boolean)
     .slice(0, 2)
     .map((part) => part[0]?.toUpperCase() ?? "")
     .join("") || "ST";
 
   return (
-    <article className={`student-card ${favorite ? "is-favorite" : ""}`}>
+    <article className="student-card">
       <div className="student-card__top">
         <div className="avatar" aria-label={`${name} initials`}>
           {initials}
@@ -27,23 +19,14 @@ export default function StudentCard({
         </div>
       </div>
 
-      <div className="student-tags">
-        <span className="tag tag-course">{course}</span>
-        <span className="tag tag-year">{year}</span>
+      <div className="student-meta">
+        <span className="meta-tag meta-course">{course}</span>
+        <span className="meta-tag meta-year">{year}</span>
       </div>
 
-      <div className="card-actions">
-        <button
-          type="button"
-          className={`favorite-btn ${favorite ? "active" : ""}`}
-          onClick={() => onToggleFavorite(id)}
-        >
-          {favorite ? "★ Saved" : "☆ Save"}
-        </button>
-        <button type="button" className="delete-btn" onClick={() => onDelete(id)}>
-          Delete
-        </button>
-      </div>
+      <button type="button" className="delete-btn" onClick={() => onDelete(id)}>
+        Delete
+      </button>
     </article>
   );
 }
