@@ -4,7 +4,7 @@ import StudentCard from "./StudentCard.jsx";
 const initialStudents = [
   { name: "Abache, Noreal", id: "MCC2024-00133", course: "BS Information Technology", year: "3rd Year" },
   { name: "Apostol, Rhemz Jhon Cyrus C.", id: "MCC2024-00104", course: "BS Information Technology", year: "3rd Year" },
-  { name: "Goot, Pholl Vincent", id: "MCC2024-00137", course: "BS Information Technology", year: "3rd Year" },
+  { name: "Goot, Pholl Vincent", id: "MCC2024-00112", course: "BS Information Technology", year: "3rd Year" },
   { name: "Torres, John Francis", id: "MCC2024-00136", course: "BS Information Technology", year: "3rd Year" },
 ];
 
