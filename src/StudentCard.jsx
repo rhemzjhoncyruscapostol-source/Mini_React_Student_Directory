@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-// Reusable StudentCard component (uses props + useState)
 export default function StudentCard({ name, id, course, year }) {
   const [favorites, setFavorites] = useState(0);
 
