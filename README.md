@@ -11,6 +11,20 @@ npm install
 npm run dev
 ```
 
+## Deploying to Render
+
+Deploy this Vite app as a **Static Site** on Render:
+
+- **Build Command:** `npm install && npm run build`
+- **Publish Directory:** `dist`
+- **Start Command:** leave empty
+
+The repository includes a `render.yaml` Blueprint with these settings. If you
+choose Render **Web Service** instead, use:
+
+- **Build Command:** `npm install && npm run build`
+- **Start Command:** `npm start`
+
 ## Project Structure
 
 ```
