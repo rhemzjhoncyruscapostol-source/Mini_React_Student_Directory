@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f2efe8;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.directory {
+  min-height: 100vh;
+  padding: 48px 20px;
+}
+
+.directory-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.directory-header {
+  margin-bottom: 32px;
+}
+
+.directory-header h1 {
+  font-family: "Georgia", serif;
+  font-size: 30px;
+  color: #2b2a27;
+  margin: 0 0 6px 0;
+}
+
+.directory-header p {
+  margin: 0;
+  color: #8a5a3f;
+  font-size: 14px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.student-card {
+  border: 1px solid #d8d2c4;
+  border-radius: 4px;
+  padding: 20px 22px;
+  background-color: #fbfaf7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.student-card h3 {
+  margin: 0 0 8px 0;
+  font-family: "Georgia", serif;
+  font-size: 19px;
+  color: #2b2a27;
+}
+
+.student-card .details {
+  font-size: 14px;
+  color: #5c584f;
+  line-height: 1.7;
+}
+
+.favorite-btn {
+  border: 1px solid #8a5a3f;
+  background: transparent;
+  color: #8a5a3f;
+  border-radius: 3px;
+  padding: 9px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.favorite-btn.active {
+  background: #8a5a3f;
+  color: #fbfaf7;
+}
